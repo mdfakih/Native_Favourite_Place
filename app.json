@@ -21,10 +21,27 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "permissions": [
+        "android.permission.RECORD_AUDIO"
+      ],
+      "package": "com.dev_code_chill.FavouritePlace"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "cameraPermission": "The app needs access to camera to take photo of your Favourite Places"
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "28cc593d-a7ab-4dce-9c28-ba8db865892d"
+      }
     }
   }
 }
