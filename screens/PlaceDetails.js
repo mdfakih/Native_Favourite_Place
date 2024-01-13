@@ -23,8 +23,8 @@ const PlaceDetails = ({ route, navigation }) => {
 
   const showOnMapHandler = () => {
     navigation.navigate('Map', {
-      initalLat: fetchedPlace.location.lat,
-      initalLng: fetchedPlace.location.lng,
+      initialLat: fetchedPlace.location.lat,
+      initialLng: fetchedPlace.location.lng,
     });
   };
 

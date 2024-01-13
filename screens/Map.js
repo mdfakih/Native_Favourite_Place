@@ -1,12 +1,12 @@
 import React, { useCallback, useLayoutEffect, useState } from 'react';
 import { Alert, StyleSheet } from 'react-native';
-import MapView, { Marker } from 'react-native-maps';
+import MapView, { Marker, PROVIDER_GOOGLE } from 'react-native-maps';
 import IconButton from '../components/UI/IconButton';
 
 const Map = ({ navigation, route }) => {
   const initalLocation = route.params && {
     lat: route.params.initialLat,
-    lng: route.params.initalLng,
+    lng: route.params.initialLng,
   };
 
   const [selLoc, setSelLoc] = useState(initalLocation);
@@ -61,6 +61,7 @@ const Map = ({ navigation, route }) => {
 
   return (
     <MapView
+      provider={PROVIDER_GOOGLE}
       style={styles.map}
       initialRegion={region}
       onPress={selectLocationHandler}
